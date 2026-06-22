@@ -3,8 +3,8 @@ import mysql from 'mysql'
 const db = mysql.createConnection({
     host: '192.168.1.1',
     user: 'root',
-    password: '361820Vn',
-    database: 'vibetrack'
+    password: '1234',
+    database: 'bd_vibetrack'
 })
 
 db.connect((err) => {

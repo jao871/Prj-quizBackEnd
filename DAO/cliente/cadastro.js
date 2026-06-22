@@ -1,13 +1,13 @@
 
 app.post('/cadastro', (req, res) => {
-    const { nome, email, senha } = req.body
+    const { nome, email, senha, estado, dataNasc } = req.body
 
-    if (!nome || !email || !senha) {
+    if (!nome || !email || !senha || !estado || !dataNasc) {
         return res.status(400).json({ erro: 'Preencha todos os campos.' })
     }
 
-    const sql = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)'
-    db.query(sql, [nome, email, senha], (err) => {
+    const sql = 'INSERT INTO usuarios (nome, email, senha, estado, dataNasc) VALUES (?, ?, ?)'
+    db.query(sql, [nome, email, senha, estado, dataNasc], (err) => {
         if (err) {
             if (err.code === 'ER_DUP_ENTRY') {
                 return res.status(409).json({ erro: 'E-mail já cadastrado.' })
