@@ -3,7 +3,7 @@ import mysql from 'mysql'
 const db = mysql.createConnection({
     host: '192.168.1.1',
     user: 'root',
-    password: '361820Vn',
+    password: '1234',
     database: 'vibetrack'
 })
 
