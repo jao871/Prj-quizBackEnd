@@ -4,7 +4,11 @@ const db = mysql.createConnection({
     host: '192.168.1.1',
     user: 'root',
     password: '1234',
+<<<<<<< HEAD
     database: 'bd_vibetrack'
+=======
+    database: 'vibetrack'
+>>>>>>> e2d7b134265708a889d118c663e6edcfeefa77fa
 })
 
 db.connect((err) => {
